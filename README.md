@@ -22,7 +22,7 @@ In this project, I deployed a sample Python application to a Google Kubernetes E
  
 ## Video
 
-https://linktr.ee/emancickusic
+https://youtu.be/0vvhq8Y_zQQ
 
 
 ## Step 1: Download and Deploy the Application
