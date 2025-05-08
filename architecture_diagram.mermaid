@@ -1,0 +1,31 @@
+graph LR
+    User((User)) -->|HTTP Request| LB[Load Balancer]
+    subgraph "Google Kubernetes Engine Cluster"
+        LB -->|forwards| ServiceA[Service A\ncloud-trace-demo-a]
+        ServiceA -->|calls| ServiceB[Service B\ncloud-trace-demo-b]
+        ServiceB -->|calls| ServiceC[Service C\ncloud-trace-demo-c]
+    end
+    
+    subgraph "Cloud Trace"
+        Traces[(Trace Data)]
+    end
+    
+    ServiceA -.->|sends trace data| Traces
+    ServiceB -.->|sends trace data| Traces
+    ServiceC -.->|sends trace data| Traces
+    
+    subgraph "Google Cloud Console"
+        Dashboard[Trace Dashboard]
+    end
+    
+    Traces -.->|visualized in| Dashboard
+    
+    classDef service fill:#4285F4,stroke:#1A73E8,color:white;
+    classDef trace fill:#34A853,stroke:#168039,color:white;
+    classDef console fill:#FBBC05,stroke:#EA8600,color:black;
+    classDef user fill:#EA4335,stroke:#C5221F,color:white;
+    
+    class ServiceA,ServiceB,ServiceC service;
+    class Traces trace;
+    class Dashboard console;
+    class User user;
