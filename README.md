@@ -12,7 +12,7 @@ In this project, I deployed a sample Python application to a Google Kubernetes E
 - Create traces by sending HTTP requests to the sample application
 - Use the Cloud Trace interface to view and analyze latency information
 
-## Prerequisites 
+## Prerequisites  
 
 - Google Cloud Platform account
 - Access to Google Cloud Shell or local environment with:
