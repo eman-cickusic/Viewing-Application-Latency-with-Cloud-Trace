@@ -6,7 +6,7 @@ This repository documents the process of using Google Cloud's Cloud Trace to mon
 
 In this project, I deployed a sample Python application to a Google Kubernetes Engine (GKE) cluster and used Cloud Trace to monitor and analyze application latency. The sample application consists of three microservices that communicate with each other, allowing us to observe distributed tracing in action.
 
-## Objectives
+## Objectives 
 
 - Deploy a sample application to a Google Kubernetes Engine (GKE) cluster
 - Create traces by sending HTTP requests to the sample application
